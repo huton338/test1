@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>myMemoPad</title>
+  <!-- <script src="js/jquery-2.1.3.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- <script src="js/masonry.pkgd.min.js"></script> -->
+  <script src="js/memo.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+  <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.7/dist/tesseract.js'></script>
+  <link rel="stylesheet" href="css/sample.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>MemoPad</h1>
+  </header>
+
+  <main style="display:none;">
+    <div class="contents"></div>
+    <div class="new">
+      <input type="text" name="" id="new_text_title" class="title">
+      <textarea id="new_text_area"></textarea>
+      <div class="option">
+        <input name="myFile" type="file" id="inputfile" accept="image/png,image/jpeg">
+        <button id="modal_open">手書き入力</button>
+      </div>
+    </div>
+    <ul>
+      <li id="save">Save</li>
+      <li id="clear">Clear</li>
+    </ul>
+    <div class="saved_memo"></div>
+    <div class="modal_class">
+      <canvas id="canvas" width=500 height="300"></canvas>
+      <button id="close_canvas">×</button>
+      <div class="option_canvas">
+        <button id="trans_canvas">文字変換</button>
+        <button id="clear_canvas">クリア</button>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <small>G's</small>
+  </footer>
+
+</body>
+
+</html>
